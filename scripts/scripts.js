@@ -89,7 +89,7 @@ function newUaWord() {
     esWord.textContent = '?'
     lowerBox.addEventListener('click', () => {
         esWord.textContent = wordPairs[randomNumber].es
-    })
+    },{once:true})
 }
 
 esButton.addEventListener('click', () => {
@@ -102,5 +102,5 @@ function newEsWord() {
     uaWord.textContent = '?'
     upperBox.addEventListener('click', () => {
         uaWord.textContent = wordPairs[randomNumber].ua
-    })
+    },{once:true})
 }
