@@ -19,6 +19,8 @@ adjButton.addEventListener('click', () => {
     uaButton.classList.remove('btn-grad-en');
     uaButton.classList.add('btn-grad');
     uaButton.innerText = 'UA 🇺🇦';
+    esWord.textContent = '?'
+    uaWord.textContent = '?'
 })
 
 verbButton.addEventListener('click', () => {
@@ -26,6 +28,8 @@ verbButton.addEventListener('click', () => {
     uaButton.classList.remove('btn-grad-en');
     uaButton.classList.add('btn-grad');
     uaButton.innerText = 'UA 🇺🇦';
+    esWord.textContent = '?'
+    uaWord.textContent = '?'
 })
 
 twoFiftyButton.addEventListener('click', () => {
@@ -33,6 +37,8 @@ twoFiftyButton.addEventListener('click', () => {
     uaButton.innerText = 'EN 🇬🇧';
     uaButton.classList.remove('btn-grad');
     uaButton.classList.add('btn-grad-en');
+    esWord.textContent = '?'
+    uaWord.textContent = '?'
 })
 
 thousandButton.addEventListener('click', () => {
@@ -40,8 +46,8 @@ thousandButton.addEventListener('click', () => {
     uaButton.classList.add('btn-grad-en');
     uaButton.innerText = 'EN 🇬🇧';
     wordSet = wordPairs1000;
-    // uaButton.classList.add(btn-grad-en);
-
+    esWord.textContent = '?'
+    uaWord.textContent = '?'
 })
 
 uaButton.addEventListener('click', () => {
