@@ -1,8 +1,9 @@
 const uaWord = document.querySelector('#uaWord');
 const esWord = document.querySelector('#esWord');
+
 const uaButton = document.querySelector('#ua');
 const esButton = document.querySelector('#es');
-const stopButton = document.querySelector('#stop');
+
 const upperBox = document.querySelector('#upperBox');
 const lowerBox = document.querySelector('#lowerBox');
 
@@ -1435,70 +1436,47 @@ thousandButton.addEventListener('click', () => {
 })
 
 uaButton.addEventListener('click', () => {
-    // plusWords = 0;
-    // minusWords = 0;
-    // esWordPlus.textContent = plusWords;
-    // esWordMinus.textContent = minusWords;
     newUaWord()
 })
 
 esButton.addEventListener('click', () => {
-
     newEsWord()
 })
 
-// function newUaWord() {
-//     let randomNumber = Math.floor(Math.random() * wordSet.length)
-//     uaWord.textContent = wordSet[randomNumber].ua
-//     esWord.textContent = '?'
-//     lowerBox.addEventListener('click', () => {
-//         esWord.textContent = wordSet[randomNumber].es
-//     }, { once: true })
-// }
-
-// ****************************************
 function newUaWord() {
     let randomNumber = Math.floor(Math.random() * wordSet.length)
     uaWord.textContent = wordSet[randomNumber].ua
     esWord.textContent = '?'
-    lowerBox.addEventListener('click', function (evt) {
+    lowerBox.addEventListener('click', () => {
+        esWord.textContent = wordSet[randomNumber].es
+    }, { once: true })
+}
+
+lowerBox.addEventListener('click', function (evt) {
+    if (esWord.textContent === '?') {
         if (evt.x <= document.activeElement.clientWidth / 2) {
             wordPlus.textContent = `+${wordPlusCounter += 1}`;
         } else {
             wordMinus.textContent = `-${wordMinusCounter += 1}`;
         }
-        esWord.textContent = wordSet[randomNumber].es
-    }, { once: true })
-}
+    }
+})
 
 function newEsWord() {
     let randomNumber = Math.floor(Math.random() * wordSet.length)
     esWord.textContent = wordSet[randomNumber].es
     uaWord.textContent = '?'
-    upperBox.addEventListener('click', function (evt) {
+    upperBox.addEventListener('click', () => {
+        uaWord.textContent = wordSet[randomNumber].ua
+    }, { once: true })
+}
+
+upperBox.addEventListener('click', function (evt) {
+    if (uaWord.textContent === '?') {
         if (evt.x <= document.activeElement.clientWidth / 2) {
             wordPlus.textContent = `+${wordPlusCounter += 1}`;
         } else {
             wordMinus.textContent = `-${wordMinusCounter += 1}`;
         }
-        uaWord.textContent = wordSet[randomNumber].ua
-    }, { once: true })
-}
-
-// upperBox.addEventListener('click', function(evt) {
-//     if (evt.x <= document.activeElement.clientWidth/2) {
-//         console.log('+1')
-//     } else {
-//         console.log('-1')
-//     }
-// })
-// ****************************************
-
-// function newEsWord() {
-//     let randomNumber = Math.floor(Math.random() * wordSet.length)
-//     esWord.textContent = wordSet[randomNumber].es
-//     uaWord.textContent = '?'
-//     upperBox.addEventListener('click', () => {
-//         uaWord.textContent = wordSet[randomNumber].ua
-//     }, { once: true })
-// }
+    }
+})
