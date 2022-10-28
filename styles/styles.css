@@ -1,4 +1,11 @@
-         
+         #wordPlus {
+          color: green;
+         }
+
+         #wordMinus {
+          color: red;
+         }
+
          .btn-grad {
             background-image: linear-gradient(to right, #eeec69 0%, #64b3f4  51%, #dfe885  100%);
             /* background-image: linear-gradient(to right, #c2e59c 0%, #64b3f4  51%, #c2e59c  100%); */
