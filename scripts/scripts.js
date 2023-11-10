@@ -22,7 +22,7 @@ const wordPairsVerbos = [
     { es: 'acompañar', ua: 'проводити, супроводжувати / to accompany' },
     { es: 'agradecer', ua: 'подякувати, бути вдячним / to thank, be grateful' },
     { es: 'almorzar', ua: 'обідати / to have lunch' },
-    { es: 'aparecer', ua: 'з'явитися / to appear' },
+    { es: 'aparecer', ua: 'з`явитися / to appear' },
     { es: 'aprender', ua: 'вчити / to learn' },
     { es: 'aterrizar', ua: 'приземлятися / to land' },
     { es: 'ayudar', ua: 'допомагати / to help' },
