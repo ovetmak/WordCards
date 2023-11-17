@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Welcome to Word Cards (UA-ES)</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
 
-<body>
+  <body>
     <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
-        <ul>
-          <li><a href="#" id="adj">Adjetivos</a></li>
-          <li><a href="#" id="verb">Verbos</a></li>
-          <li><a href="#" id="twoFifty">250</a></li>
-          <li><a href="#" id="thousand">1000</a></li>
-          <li><a href="/" id="reset">Reset</a></li>
-        </ul>
-      </nav>
+      <ul>
+        <li><a href="#" id="adj">Adjetivos</a></li>
+        <li><a href="#" id="verb">Verbos</a></li>
+        <li><a href="#" id="twoFifty">250</a></li>
+        <li><a href="#" id="thousand">1000</a></li>
+        <li><a href="/" id="reset">Reset</a></li>
+      </ul>
+    </nav>
 
     <div class="columns">
-        <div class="column is-half is-offset-one-quarter">
-
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">Word Cards</p>
-                    <p class="card-header-title" id="wordPlus"></p>
-                    <p class="card-header-title" id="wordMinus"></p>
-                    <!-- <button class="card-header-icon" aria-label="more options">
+      <div class="column is-half is-offset-one-quarter">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Word Cards</p>
+            <p class="card-header-title" id="wordPlus"></p>
+            <p class="card-header-title" id="wordMinus"></p>
+            <!-- <button class="card-header-icon" aria-label="more options">
                         <span class="icon">
                             <i class="fas fa-angle-down" aria-hidden="true"></i>
                         </span>
                     </button> -->
-                </header>
+          </header>
 
-                <div class="card-content">
-
-                    <div class="box" id="upperBox">
-                        <div class="content has-text-centered">
-                            <div class="content is-large">
-                                <p class="title is-2" id="uaWord">Українська</p>
-                                <p class="subtitle is-4">@слово</p>
-                                <!-- <div class="columns is-mobile is-multiline ">
+          <div class="card-content">
+            <div class="box" id="upperBox">
+              <div class="content has-text-centered">
+                <div class="content is-large">
+                  <p class="title is-2" id="uaWord">Українська</p>
+                  <p class="subtitle is-4">@слово</p>
+                  <!-- <div class="columns is-mobile is-multiline ">
                                     <div class="column">
                                         <p class="subtitle" id="uaWordPlus">0</p>
                                     </div>
@@ -53,16 +53,16 @@
                                         <p class="subtitle" id="uaWordMinus">0</p>
                                     </div>
                                 </div> -->
-                            </div>
-                        </div>
-                    </div>
+                </div>
+              </div>
+            </div>
 
-                    <div class="box" id="lowerBox">
-                        <div class="content has-text-centered">
-                            <div class="content is-large">
-                                <p class="title is-2" id="esWord">Español</p>
-                                <p class="subtitle">@palabra</p>
-                                <!-- <div class="columns is-mobile is-multiline ">
+            <div class="box" id="lowerBox">
+              <div class="content has-text-centered">
+                <div class="content is-large">
+                  <p class="title is-2" id="esWord">Español</p>
+                  <p class="subtitle">@palabra</p>
+                  <!-- <div class="columns is-mobile is-multiline ">
                                     <div class="column">
                                         <p class="subtitle" id="esWordPlus">0</p>
                                     </div>
@@ -73,24 +73,30 @@
                                         <p class="subtitle" id="esWordMinus">0</p>
                                     </div>
                                 </div> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <footer class="card-footer">
-                        <button class="btn-grad button is-large  is-info card-footer-item" id="ua">UA 🇺🇦</button>
-                        <button class="btn-grad-es button is-large  is-danger card-footer-item" id="es">ES 🇪🇸</button>
-                        <!-- <button class="button is-large  is-warning card-footer-item" id="stop">Start</button> -->
-
-                    </footer>
                 </div>
+              </div>
             </div>
 
+            <footer class="card-footer">
+              <button
+                class="btn-grad button is-large is-info card-footer-item"
+                id="ua"
+              >
+                UA 🇺🇦
+              </button>
+              <button
+                class="btn-grad-es button is-large is-danger card-footer-item"
+                id="es"
+              >
+                ES 🇪🇸
+              </button>
+              <!-- <button class="button is-large  is-warning card-footer-item" id="stop">Start</button> -->
+            </footer>
+          </div>
         </div>
+      </div>
     </div>
 
-
-    <script src="scripts/scripts.js"></script>
-</body>
-
+    <script type="module" src="scripts/scripts.js"></script>
+  </body>
 </html>
