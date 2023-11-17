@@ -5,6 +5,8 @@ import { wordPairs1000 } from '/scripts/1000.js'
 
 const uaWord = document.querySelector('#uaWord')
 const esWord = document.querySelector('#esWord')
+const enWord = document.querySelector('#enWord')
+const enWordEs = document.querySelector('#enWordEs')
 
 const uaButton = document.querySelector('#ua')
 const esButton = document.querySelector('#es')
@@ -72,11 +74,17 @@ esButton.addEventListener('click', () => {
 function newUaWord() {
   let randomNumber = Math.floor(Math.random() * wordSet.length)
   uaWord.textContent = wordSet[randomNumber].ua
+  enWord.textContent = wordSet[randomNumber].en
+  enWordEs.textContent = ''
+  uaButton.disabled = true
+  esButton.disabled = true
   esWord.textContent = '?'
   lowerBox.addEventListener(
     'click',
     () => {
       esWord.textContent = wordSet[randomNumber].es
+      uaButton.disabled = false
+      esButton.disabled = false
     },
     { once: true }
   )
@@ -95,11 +103,17 @@ lowerBox.addEventListener('click', function (evt) {
 function newEsWord() {
   let randomNumber = Math.floor(Math.random() * wordSet.length)
   esWord.textContent = wordSet[randomNumber].es
+  enWordEs.textContent = wordSet[randomNumber].en
+  enWord.textContent = ''
+  esButton.disabled = true
+  uaButton.disabled = true
   uaWord.textContent = '?'
   upperBox.addEventListener(
     'click',
     () => {
       uaWord.textContent = wordSet[randomNumber].ua
+      uaButton.disabled = false
+      esButton.disabled = false
     },
     { once: true }
   )
