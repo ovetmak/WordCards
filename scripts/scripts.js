@@ -24,12 +24,12 @@ const reset = document.querySelector('#reset')
 const wordPlus = document.querySelector('#wordPlus')
 const wordMinus = document.querySelector('#wordMinus')
 
-let wordSet = wordPairsVerbos
+let wordSet = wordPairsDefault
 let wordPlusCounter = 0
 let wordMinusCounter = 0
 
 adjButton.addEventListener('click', () => {
-  wordSet = wordPairsDefault
+  wordSet = wordPairsAdj
   uaButton.classList.remove('btn-grad-en')
   uaButton.classList.add('btn-grad')
   uaButton.innerText = 'UA 🇺🇦'
@@ -38,7 +38,7 @@ adjButton.addEventListener('click', () => {
 })
 
 verbButton.addEventListener('click', () => {
-  wordSet = wordPairsDefault
+  wordSet = wordPairsVerbos
   uaButton.classList.remove('btn-grad-en')
   uaButton.classList.add('btn-grad')
   uaButton.innerText = 'UA 🇺🇦'
