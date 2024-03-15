@@ -2,6 +2,7 @@ import { wordPairsVerbos } from '/scripts/verbos.js'
 import { wordPairsAdj } from '/scripts/adjectives.js'
 import { wordPairs250 } from '/scripts/250.js'
 import { wordPairs1000 } from '/scripts/1000.js'
+import { wordPairsDefault } from '/scripts/default.js'
 
 const uaWord = document.querySelector('#uaWord')
 const esWord = document.querySelector('#esWord')
@@ -28,7 +29,7 @@ let wordPlusCounter = 0
 let wordMinusCounter = 0
 
 adjButton.addEventListener('click', () => {
-  wordSet = wordPairsAdj
+  wordSet = wordPairsDefault
   uaButton.classList.remove('btn-grad-en')
   uaButton.classList.add('btn-grad')
   uaButton.innerText = 'UA 🇺🇦'
@@ -37,7 +38,7 @@ adjButton.addEventListener('click', () => {
 })
 
 verbButton.addEventListener('click', () => {
-  wordSet = wordPairsVerbos
+  wordSet = wordPairsDefault
   uaButton.classList.remove('btn-grad-en')
   uaButton.classList.add('btn-grad')
   uaButton.innerText = 'UA 🇺🇦'
